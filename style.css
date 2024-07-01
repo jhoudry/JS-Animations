@@ -1,0 +1,232 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Playwrite IT Moderna", cursive;
+}
+
+body::-webkit-scrollbar {
+    width: 12px; /* Largeur de la barre de défilement */
+}
+
+body::-webkit-scrollbar-track {
+    background: black; /* Couleur de fond de la piste de défilement */
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #fff; /* Couleur du pouce de la barre de défilement */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #fff; /* Couleur du pouce de la barre de défilement au survol */
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container h1{
+    color: white;
+    font-weight: 900;
+}
+
+.container h4{
+    color: white;
+    transform: rotate(90deg);
+    animation: floating 1.5s ease-in-out infinite;
+}
+
+
+
+@keyframes floating{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(15px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+
+.container-body {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    width: 65%;
+    height: 65%;
+}
+
+.carre {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.un {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.deux {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.trois {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.quatre {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.cinq {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.six {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.container-body .grid .carre:hover{
+    transition: 0.3s;
+    transform: scale(1.03);
+}
+
+.carre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-body-deux{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    gap: 5%;
+}
+
+.arrive{
+    background-color: white;
+    width: 25%;
+    height: 10vh;
+}
+
+.container-body-deux .un{
+    margin-right: 20%;
+}
+.container-body-deux .deux{
+    margin-left: 20%;
+}
+.container-body-deux .trois{
+    margin-right: 20%;
+}
+.container-body-deux .quatre{
+    margin-left: 20%;
+}
+
+.container-body-deux .arrive:hover{
+    transition: 0.3s;
+    transform: scale(1.03);
+}
+
+.container-body-trois{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.container-body-trois a{
+    color: #fff;
+}
+
+.container-body-trois a:hover{
+    transition: 0.3s ease-in-out;
+    transform: scale(1.05);
+}
+
+body a{
+    text-decoration: none;
+}
+
+.button-wrapper canvas {
+    position: absolute;
+
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+
+  .button-27 {
+    appearance: none;
+    background-color: #fff;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: black;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 60px;
+    min-width: 0;
+    outline: none;
+    padding: 16px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 100%;
+    will-change: transform;
+  }
+  
+  .button-27:disabled {
+    pointer-events: none;
+  }
+  
+  .button-27:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+  }
+  
+  .button-27:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+  
