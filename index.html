@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna:wght@100..400&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <div class="container">
+        <h1>SCROLL</h1>
+        <h4>°</h4>
+    </div>
+    <div class="container-body">
+        <div class="grid">
+            <div class="carre un" data-aos="fade-down-right"></div>
+            <div class="carre deux" data-aos="fade-down"></div>
+            <div class="carre trois" data-aos="fade-down-left"></div>
+            <div class="carre quatre" data-aos="fade-up-right"></div>
+            <div class="carre cinq" data-aos="fade-up"></div>
+            <div class="carre six" data-aos="fade-up-left"></div>
+        </div>
+    </div>
+
+    <div class="container-body-deux">
+        <div class="arrive un" data-aos="fade-right"></div>
+        <div class="arrive deux" data-aos="fade-left"></div>
+        <div class="arrive trois" data-aos="fade-right"></div>
+        <div class="arrive quatre" data-aos="fade-left"></div>
+    </div>
+
+    <div class="container-body-trois">
+        <div class="button-wrapper">
+            <button class="confetti-button button-27" role="button" data-aos="fade-down">Clique !🎉</button>
+            <script>
+                document.getElementsByClassName("confetti-button")[0].addEventListener("click", () => {
+                let canvas = document.createElement("canvas");
+                let container = document.getElementsByClassName("button-wrapper")[0];
+                canvas.width = 800;
+                canvas.height = 800;
+
+                container.appendChild(canvas);
+
+                let confetti_button = confetti.create(canvas);
+                confetti_button().then(() => container.removeChild(canvas));
+                });
+            </script>
+          </div>
+
+        
+    </div>
+
+
+    
+    
+
+</body>
+</html>
